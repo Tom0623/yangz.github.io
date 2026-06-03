@@ -14,11 +14,20 @@
   </head>
   <body>
     <h1>Planet data table</h1>
-    <caption>Data about the planets of our solar system (Planetary facts taken from 
-        <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>). </caption>
 
     <table>
+
+    <caption>Data about the planets of our solar system (Planetary facts taken from 
+        <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>). </caption>
+        
+    <colgroup>
+        <col span="2" />
+        <col class="column-border" />
+        <col span="9" />
+    </colgroup>
+     <thead>
         <tr>
+            <td colspan="2"></td>
             <th> Name </th>
             <th> Mass (10<sup>24</sup>kg) </th>
             <th> Diameter (km) </th>
@@ -32,7 +41,8 @@
         </tr>
 
         <tr>
-            <td> Mercury </td>
+            <th rowspan="4" colspan="2" scope="rowgroup">Terrestrial planets</th>
+            <th scope="row">Mercury</th>
             <td> 0.330 </td>
             <td> 4,879 </td>
             <td> 5427 </td>
@@ -45,7 +55,7 @@
         </tr>
 
         <tr>
-            <td> Venus </td>
+            <th scope="row">Venus</th>
             <td> 4.87 </td>
             <td> 12,104 </td>
             <td> 5243 </td>
@@ -57,7 +67,7 @@
         </tr>
         
         <tr>
-            <td> Earth </td>
+            <th scope="row">Earth</th>
             <td> 5.97 </td>
             <td> 12,756 </td>
             <td> 5514 </td>
@@ -70,7 +80,7 @@
         </tr>
 
         <tr>
-            <td> Mars </td>
+            <th scope="row">Mars</th>
             <td> 0.642 </td>
             <td> 6,792 </td>
             <td> 3933 </td>
@@ -83,7 +93,9 @@
         </tr>
 
         <tr>
-            <td> Jupiter </td>
+            <th rowspan="4" scope="rowgroup">Jovian planets</th>
+            <th colspan="2" scope="rowgroup">Gas giants</th>
+            <th scope="row">Jupiter</th>
             <td> 1898 </td>
             <td> 142,984 </td>
             <td> 1326 </td>
@@ -96,7 +108,7 @@
         </tr>
 
         <tr>
-            <td> Saturn </td>
+            <th scope="row">Saturn</th>
             <td> 568 </td>
             <td> 120,536 </td>
             <td> 687 </td>
@@ -108,7 +120,8 @@
         </tr>
 
         <tr>
-            <td> Uranus </td>
+            <th colspan="2" scope="rowgroup">Ice giants</th>
+            <th scope="row">Uranus</th>
             <td> 86.8 </td>
             <td> 51,118 </td>
             <td> 1271 </td>
@@ -120,7 +133,7 @@
         </tr>
 
         <tr>
-            <td> Neptune </td>
+            <th scope="row">Neptune</th>
             <td> 102 </td>
             <td> 49,528 </td>
             <td> 1638 </td>
@@ -132,7 +145,8 @@
         </tr>
 
         <tr>
-            <td> Pluto </td>
+            <th rowspan="1" colspan="2" scope="rowgroup">Dwarf planets</th>
+            <th scope="row">Pluto</th>
             <td> 0.0146 </td>
             <td> 2,377 </td>
             <td> 2095 </td>
