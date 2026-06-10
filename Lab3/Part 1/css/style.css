@@ -35,3 +35,14 @@ div {
     color: darkslategray;
     font-weight: bold;
 }
+
+a {
+    color: green;
+}
+
+a:hover,
+a:focus {
+    color: darksgreen;
+    text-decoration: none;
+}
+
