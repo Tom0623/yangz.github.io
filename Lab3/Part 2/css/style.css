@@ -8,13 +8,29 @@ p{
     font-family: "Forum", serif;
     font-weight: 400;
     font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
 }
 
 h1, h2{
     font-family: "DM Serif Text", serif;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
 }
+
+h1{
+    text-align: center;
+}
+
+h2{
+    margin-bottom: 0;
+}
+
+section h2 + p {
+     text-indent: 2rem;
+ }
 
 body {
     margin: 0 auto;
@@ -44,4 +60,20 @@ footer {
 
 footer p {
     text-align: center;
+}
+
+/* Link Styling */
+a:link {
+    color: #aa6666;
+}
+a:visited {
+    color: #aa6666;
+}
+a:focus {
+    color: #aa6666;
+    text-decoration: none;
+}
+a:hover {
+    color: #aa6666;
+    text-decoration: none;
 }
