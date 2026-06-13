@@ -65,15 +65,86 @@ footer p {
 /* Link Styling */
 a:link {
     color: #aa6666;
+    text-decoration: underline;
 }
 a:visited {
     color: #aa6666;
+    text-decoration: underline;
 }
 a:focus {
-    color: #aa6666;
+    color: #773333;
     text-decoration: none;
 }
 a:hover {
-    color: #aa6666;
+    color: #773333;
     text-decoration: none;
+}
+a:focus {
+    outline: none;
+}
+
+a[href*="http"] {
+    padding-right: 16px;
+    background: url("external-link-52.png") no-repeat right center;
+    background-size: 14px 14px;
+}
+
+/* List styling */
+p, ul, ol {
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+li{
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: lower-roman;
+}
+
+/* Navigation menu styling */
+
+nav {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+nav ul {
+    padding-left: 0;
+}
+
+nav li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+nav li a {
+    font-family: "Bevan", serif;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    line-height: 3.5;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid #aa6666;
+}
+
+nav li a:focus,
+nav li a:hover {
+    color: white;
+    background: #aa6666;
+}
+
+nav li a:active {
+    color: white;
+    background: black;
 }
