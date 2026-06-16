@@ -30,12 +30,16 @@ img {
 nav {
     background-color: black;
     padding: 0.5em;
+    position: sticky;
+    top: 0;
 }
 
 nav ul {
     margin: 0;
     padding: 0;
+    justify-content: space-around;
     list-style: none;
+    display: flex;
 }
 
 nav a {
@@ -52,4 +56,7 @@ nav a {
 
 .feature {
     width: 200px;
+}
+nav li {
+    text-align: center;
 }
