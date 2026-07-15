@@ -35,3 +35,18 @@ function updateDisplayedImage(event) {
     displayedImage.src = event.target.src;
     displayedImage.alt = event.target.alt;
 }
+
+//Wire up the Darken/Lighten button
+//Add a click event handler to the <button> with an anonymous function set as the handler function.
+btn.addEventListener("click", function() {
+   // Inside the function body, add a conditional structure that tests whether the <button> has a class set on it of dark or not.
+    if (btn.classList.contains("dark")) {
+        //If the <button> has a class of dark when clicked, change its text content to Lighten, and change the overlay element's background color to rgb(0 0 0 / 0.5). Remove the <button> element's dark class.
+        btn.textContent = "Lighten";
+        overlay.style.backgroundColor = "rgb(0 0 0 / 0.5)";
+    }else{
+        //If the <button> does not have a class of dark when clicked, change its text content to Darken, and change the overlay element's background color to rgb(0 0 0 / 0). Add the <button> element's dark class.
+        btn.textContent = "Darken";
+        overlay.style.backgroundColor = "rgb(0 0 0 / 0)";
+    }
+})
