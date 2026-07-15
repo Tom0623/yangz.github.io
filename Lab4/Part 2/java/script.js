@@ -30,3 +30,8 @@ for (const image of images) {
     newImage.addEventListener('click', updateDisplayedImage);
 }
 
+//  Create the updateDisplayedImage() function
+function updateDisplayedImage(event) {
+    displayedImage.src = event.target.src;
+    displayedImage.alt = event.target.alt;
+}
