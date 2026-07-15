@@ -14,3 +14,19 @@ const images = [{filename: "images/pic1.jpg" , alt: "Closeup of a human eye"},
 // Add the images to the thumbnail bar
 // Create a constant called baseURL containing the base URL of each image file
 const baseURL = "https://github.com/Tom0623/yangz.github.io/tree/main/Lab4/Part%202/images";
+
+// make a for loop
+for (const image of images) {
+    //For each image, create a new <img> element.
+    const newImg = document.createElement("img");
+    // Set the <img> source to equal the URL of the image, which should be a combination of the baseURL and the filename, and the alt attribute equal to the alt text.
+    newImg.src = `${baseURL}${image.filename}`;
+    newImg.alt = image.alt;
+    //Add another attribute to the <img> to make it focusable via the keyword.
+    newImage.tabIndex = 0;
+    //Append the <img> to the thumbBar.
+    thumbBar.appendChild(newImage);
+    // Add a click event handler to the <img> so that when it is clicked, a function called updateDisplayedImage() is run, which displays the clicked image at full size. You'll create this function later on.
+    newImage.addEventListener('click', updateDisplayedImage);
+}
+
