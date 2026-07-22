@@ -5,6 +5,10 @@ const ctx = canvas.getContext("2d");
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
+// Create a variable to store a reference to a paragraph.
+const para = document.querySelector("p");
+let count = 0;
+
 // Make a function
 function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -135,6 +139,10 @@ class EvilCircle extends Shape {
                 //Any ball that collides with the evil circle within the inner `if` statement is marked as no longer existing.
                 if (distance < this.size + ball.size) {
                     ball.exists = false;
+                    // Each time the evil circle eats a ball (causing it to disappear), decrease the count and display the updated number of balls.
+                    count--;
+                    para.textContent = "Ball count: " + count;
+
                 }
             }
         }
@@ -157,6 +165,9 @@ while (balls.length < 25) {
         size,
     );
     balls.push(ball);
+    // Each time a ball is added to the scene, increment the counter and display the updated number of balls.
+    count++;
+    para.textContent = "Ball count: " + count;
 }
 //Create an EvilCircle instance, ensuring it is created only once globally
 const evilCircle = new EvilCircle(width / 2, height / 2);
