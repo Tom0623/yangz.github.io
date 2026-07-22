@@ -155,22 +155,26 @@ while (balls.length < 25) {
         randomRGB(),
         size,
     );
-
     balls.push(ball);
 }
+//Create an EvilCircle instance, ensuring it is created only once globally
+const evilCircle = new EvilCircle(width / 2, height / 2);
 // make a function loop
 function loop() {
     ctx.fillStyle = "rgb(0 0 0 / 25%)";
     ctx.fillRect(0, 0, width, height);
-
     for (const ball of balls) {
-        ball.draw();
-        ball.update();
-        // Update your loop() function to call ball.collisionDetect() after ball.update()
-        ball.collisionDetect();
+        // Rendering, movement, and collision detection occur only while the ball is still present.
+        if (ball.exists) {
+            ball.draw();
+            ball.update();
+            ball.collisionDetect();
+        }
+        //The state of the evil circle is drawn and updated in every frame.
+        evilCircle.draw();
+        evilCircle.checkBounds();
+        evilCircle.collisionDetect();
     }
-
     requestAnimationFrame(loop);
 }
-
 loop();
