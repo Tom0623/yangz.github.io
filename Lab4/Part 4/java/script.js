@@ -171,11 +171,11 @@ function loop() {
             ball.update();
             ball.collisionDetect();
         }
-        //The state of the evil circle is drawn and updated in every frame.
-        evilCircle.draw();
-        evilCircle.checkBounds();
-        evilCircle.collisionDetect();
     }
+    //The state of the evil circle is drawn and updated in every frame.
+    evilCircle.draw();
+    evilCircle.update();
+    evilCircle.collisionDetect();
     requestAnimationFrame(loop);
 }
 loop();
