@@ -14,13 +14,20 @@ function randomRGB() {
     return `rgb(${random(0, 255)} ${random(0, 255)} ${random(0, 255)})`;
 }
 
-// make a ball
-class Ball {
-    constructor(x, y, velX, velY, color, size) {
+//Create a Shape class
+class Shape {
+    constructor(x, y, velX, velY) {
         this.x = x;
         this.y = y;
         this.velX = velX;
         this.velY = velY;
+        this.exists = true;
+    }
+}
+// make a ball
+class Ball extends Shape {
+    constructor(x, y, velX, velY, color, size) {
+        super(x, y, velX, velY);
         this.color = color;
         this.size = size;
     }
@@ -55,7 +62,7 @@ class Ball {
     // Add Collision Detection
     collisionDetect() {
         for (const ball of balls) {
-            if (this !== ball) {
+            if (!(this === ball) && ball.exists) {
                 const dx = this.x - ball.x;
                 const dy = this.y - ball.y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
