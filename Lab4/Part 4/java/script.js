@@ -81,6 +81,47 @@ class EvilCircle extends Shape {
         this.color = "white";
         this.size = 10;
     }
+    // Make a draw (but change to strokeStyle and stroke and lineWidth to 3)
+    draw() {
+        ctx.beginPath();
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = this.color;
+        ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+        ctx.stroke();
+    }
+    // Make the update (Do not automatically update the position of the evil circle on every frame, no velX and velY to x or y and size)
+    update() {
+        if (this.x + this.size >= width) {
+            this.X = -this.size;
+        }
+
+        if (this.x - this.size <= 0) {
+            this.X = -this.size;
+        }
+
+        if (this.y + this.size >= height) {
+            this.Y = -this.size;
+        }
+
+        if (this.y - this.size <= 0) {
+            this.Y = -this.size;
+        }
+    }
+    // Add Collision Detection
+    collisionDetect() {
+        for (const ball of balls) {
+            //In the outer if statement, only check whether the ball exists
+            if (ball.exists) {
+                const dx = this.x - ball.x;
+                const dy = this.y - ball.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                //Any ball that collides with the evil circle within the inner `if` statement is marked as no longer existing.
+                if (distance < this.size + ball.size) {
+                    ball.exists = false;
+                }
+            }
+        }
+    }
 }
 // The constructor should include code that allows the user to move the evil circle around the screen.
 window.addEventListener("keydown", (e) => {
