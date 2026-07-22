@@ -80,6 +80,23 @@ class EvilCircle extends Shape {
         super(x,y,20,20);
         this.color = "white";
         this.size = 10;
+        // The constructor should include code that allows the user to move the evil circle around the screen.
+        window.addEventListener("keydown", (e) => {
+            switch (e.key) {
+                case "a":
+                    this.x -= this.velX;
+                    break;
+                case "d":
+                    this.x += this.velX;
+                    break;
+                case "w":
+                    this.y -= this.velY;
+                    break;
+                case "s":
+                    this.y += this.velY;
+                    break;
+            }
+        });
     }
     // Make a draw (but change to strokeStyle and stroke and lineWidth to 3)
     draw() {
@@ -123,23 +140,7 @@ class EvilCircle extends Shape {
         }
     }
 }
-// The constructor should include code that allows the user to move the evil circle around the screen.
-window.addEventListener("keydown", (e) => {
-    switch (e.key) {
-        case "a":
-            this.x -= this.velX;
-            break;
-        case "d":
-            this.x += this.velX;
-            break;
-        case "w":
-            this.y -= this.velY;
-            break;
-        case "s":
-            this.y += this.velY;
-            break;
-    }
-});
+
 // Animated Ball
 const balls = [];
 
