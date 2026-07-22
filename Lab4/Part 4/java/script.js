@@ -111,7 +111,7 @@ class EvilCircle extends Shape {
         ctx.stroke();
     }
     // Make the update (Do not automatically update the position of the evil circle on every frame, no velX and velY to x or y and size)
-    update() {
+    checkBounds() {
         if (this.x + this.size >= width) {
             this.X = -this.size;
         }
@@ -185,7 +185,7 @@ function loop() {
     }
     //The state of the evil circle is drawn and updated in every frame.
     evilCircle.draw();
-    evilCircle.update();
+    evilCircle.checkBounds();
     evilCircle.collisionDetect();
     requestAnimationFrame(loop);
 }
