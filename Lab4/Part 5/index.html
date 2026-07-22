@@ -23,25 +23,43 @@ if you do, we'll enter you into a prize draw where you'll have a chance
 to win prizes.
 
 --
+<form>
 
 Facilities
-
-Was the porridge
-Too hot?
-Too cold?
-Just right?
-
-Were the beds
-Too hard?
-Too soft?
-Just right?
-
-Describe the chairs (select all you agree with)
-Comfy
-Luxurious
-Hi-tech
-Pretty
-Majestic
+        <!-- porridge -->
+        <fieldset>
+            <legend>Was the porridge</legend>
+            <input type="radio" id="porridge-1" name="porridge" value="hot" checked/>
+            <label for="porridge-1">Too hot?</label><br>
+            <input type="radio" id="porridge-2" name="porridge" value="cold"/>
+            <label for="porridge-2">Too cold?</label><br>
+            <input type="radio" id="porridge-3" name="porridge" value="right"/>
+            <label for="porridge-3">Just right?</label><br>
+        </fieldset>
+        <!-- beds -->
+        <fieldset>
+            <legend>Were the beds</legend>
+            <input type="radio" id="beds-1" name="beds" value="hard" checked/>
+            <label for="beds-1">Too hard?</label><br>
+            <input type="radio" id="beds-2" name="beds" value="soft"/>
+            <label for="beds-2">Too soft?</label><br>
+            <input type="radio" id="beds-3" name="beds" value="right"/>
+            <label for="beds-3">Just right?</label><br>
+        </fieldset>
+        <!-- chairs -->
+        <fieldset>
+            <legend>Describe the chairs (select all you agree with)</legend>
+            <input type="checkbox" id="chairs-1" name="chairs" value="comfy"/>
+            <label for="chairs">Comfy</label><br>
+            <input type="checkbox" id="chairs-2" name="chairs" value="luxurious"/>
+            <label for="chairs">Luxurious</label><br>
+            <input type="checkbox" id="chairs-3" name="chairs" value="hi-tech"/>
+            <label for="chairs">Hi-Tech</label><br>
+            <input type="checkbox" id="chairs-4" name="chairs" value="pretty"/>
+            <label for="chairs">Pretty</label><br>
+            <input type="checkbox" id="chairs-5" name="chairs" value="majestic"/>
+            <label for="chairs">Majestic</label><br>
+            </fieldset>
 
 --
 
@@ -78,5 +96,6 @@ Phone
 Submit
 
 --
+</form>
 </body>
 </html>
