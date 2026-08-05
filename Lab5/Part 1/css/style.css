@@ -188,18 +188,40 @@ audio {
 .comments {
   background-color: #def;
   padding: 10px;
+  margin-top: 2rem;
+  border-radius: 4px;
 }
 
-.show-hide {
+button.show-hide {
+  display: block;
+  margin: auto auto 2rem;
+  padding: 0 16px;
+  width: auto;
+  height: auto;
+  font-size: 1.6rem;
+  line-height: 36px;
+  background-color: #def;
+  color: black;
+  border: 0;
+  border-radius: 4px;
   cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
 }
 
-.comments font[size="6"] {
+button.show-hide:hover {
+  background-color: white;
+}
+
+button.show-hide:focus {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+.comments h2 {
   font-size: 2rem;
-}
-
-.comments font[size="6"]:nth-of-type(2) {
-  margin-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .comment-form {
