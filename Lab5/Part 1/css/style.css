@@ -16,6 +16,18 @@ body {
   margin: 0 auto;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* || typography */
 
 h1,h2,h3 {
@@ -203,11 +215,22 @@ audio {
   align-self: center;
   flex: 2;
   text-align: right;
+  font-size: 1.6rem;
+  line-height: 32px;
+  font-weight: bold;
 }
 
 .comment-form input {
   margin-left: 1rem;
   flex: 6;
+}
+
+.comment-form input[type="text"] {
+  margin-left: 1rem;
+  flex: 6;
+  font-size: 1.6rem;
+  height: 32px;
+  padding: 0 5px;
 }
 
 .show-hide {
