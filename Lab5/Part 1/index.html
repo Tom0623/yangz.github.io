@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
     <!--HTML Comments-->
     <!--
     Name: Zijian Yang
@@ -10,7 +10,7 @@
     Lab 5 Part 1
     -->
     <title>INFT1206 - Lab 5 Part 1 - Accessibility assessment</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300%7CSonsie+One" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
@@ -34,7 +34,7 @@
 
       <form class="search">
         <label for="site-search" class="sr-only">Search query</label>
-        <input type="search" name="q" placeholder="Search query">
+        <input type="search" name="q" id="site-search" placeholder="Search query">
         <input type="submit" value="Go!">
       </form>
     </nav>
@@ -62,7 +62,7 @@
           </thead>
           <tbody>
             <tr>
-              <td scope="row">Wild</td>
+              <th scope="row">Wild</th>
               <td>Brown or black</td>
               <td>1.4 to 2.8 meters</td>
               <td>Woods and forests</td>
@@ -70,7 +70,7 @@
               <td>Fish, meat, plants</td>
             </tr>
             <tr>
-              <td scope="row">Urban</td>
+              <th scope="row">Urban</th>
               <td>North Face</td>
               <td>18 to 22</td>
               <td>Condos and coffee shops</td>
