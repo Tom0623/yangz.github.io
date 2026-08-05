@@ -156,6 +156,13 @@ table {
   border-collapse: collapse;
 }
 
+caption {
+  background-color: #def;
+  padding: 10px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
 th, td {
   padding: 10px;
 }
@@ -166,6 +173,12 @@ td {
 
 th[scope="col"] {
   border-bottom: 1px solid black;
+}
+
+th[scope="row"] {
+  background-color: #def;
+  text-align: left;
+  color: #1a1a1a;
 }
 
 tbody tr:nth-child(odd) {
